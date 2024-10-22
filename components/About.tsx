@@ -5,7 +5,9 @@ import SectionHeading from "./SectionHeading";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/lib/context/active-section-context";
 const About = () => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
   const { setActiveSection } = useActiveSectionContext();
   // do not set state during rendering always use useffect
   useEffect(() => {
