@@ -8,7 +8,7 @@ import { useActiveSectionContext } from "@/lib/context/active-section-context";
 
 const Projects = () => {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.2,
   });
   const { setActiveSection } = useActiveSectionContext();
   // do not set state during rendering always use useffect
