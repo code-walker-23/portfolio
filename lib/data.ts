@@ -1,3 +1,8 @@
+import urlShortener from "../public/url-shortener.png";
+import schedullr from "../public/schedullr.png";
+import jobPortal from "../public/job-portal.png";
+import sortingVisualizer from "../public/sorting-visualizer.png";
+
 export const links = [
   {
     name: "Home",
@@ -56,29 +61,61 @@ export const links = [
 //   },
 // ] as const;
 
-// export const projectsData = [
-//   {
-//     title: "CorpComment",
-//     description:
-//       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-//     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-//     imageUrl: corpcommentImg,
-//   },
-//   {
-//     title: "rmtDev",
-//     description:
-//       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-//     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-//     imageUrl: rmtdevImg,
-//   },
-//   {
-//     title: "Word Analytics",
-//     description:
-//       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-//     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-//     imageUrl: wordanalyticsImg,
-//   },
-// ] as const;
+export const projectsData = [
+  {
+    title: "Hirrd",
+    description:
+      "A full-stack job portal that allows employers to post job listings and job seekers to apply easily. The platform features real-time application tracking and user authentication for enhanced engagement and security.",
+    tags: [
+      "React",
+      "Supabase",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "React Hook Form",
+      "Zod",
+      "Framer Motion",
+    ],
+    imageUrl: jobPortal,
+  },
+  {
+    title: "Schedullr",
+    description:
+      "A scheduling application that enables users to book events with real-time availability. It integrates with Google Calendar for seamless event synchronization, featuring customizable booking options and efficient appointment management.",
+    tags: [
+      "React",
+      "NeonDB",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "React Hook Form",
+      "Zod",
+      "Framer Motion",
+    ],
+    imageUrl: schedullr,
+  },
+  {
+    title: "Linkeat",
+    description:
+      "A URL shortener application that allows users to easily shorten links and track metrics such as click counts and geographical location. It includes a comprehensive dashboard for managing URLs and analyzing performance.",
+    tags: [
+      "React",
+      "Supabase",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "React Hook Form",
+      "Yup",
+      "Framer Motion",
+    ],
+    imageUrl: urlShortener,
+  },
+  {
+    title: "Sorting Visualizer",
+    description:
+      "An interactive sorting visualizer that lets users visualize various sorting algorithms in action. Users can customize array values and speeds, providing an engaging educational tool for understanding sorting mechanisms.",
+    tags: ["HTML", "Javascript", "Tailwind CSS"],
+    imageUrl: sortingVisualizer,
+  },
+] as const;
+
 
 // export const skillsData = [
 //   "HTML",
