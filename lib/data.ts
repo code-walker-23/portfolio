@@ -76,6 +76,8 @@ export const projectsData = [
       "Framer Motion",
     ],
     imageUrl: jobPortal,
+    liveLink: "",
+    githubLink: "",
   },
   {
     title: "Schedullr",
@@ -91,6 +93,8 @@ export const projectsData = [
       "Framer Motion",
     ],
     imageUrl: schedullr,
+    liveLink: "",
+    githubLink: "",
   },
   {
     title: "Linkeat",
@@ -106,6 +110,8 @@ export const projectsData = [
       "Framer Motion",
     ],
     imageUrl: urlShortener,
+    liveLink: "",
+    githubLink: "",
   },
   {
     title: "Sorting Visualizer",
@@ -113,9 +119,10 @@ export const projectsData = [
       "An interactive sorting visualizer that lets users visualize various sorting algorithms in action. Users can customize array values and speeds, providing an engaging educational tool for understanding sorting mechanisms.",
     tags: ["HTML", "Javascript", "Tailwind CSS"],
     imageUrl: sortingVisualizer,
+    liveLink: "",
+    githubLink: "",
   },
 ] as const;
-
 
 // export const skillsData = [
 //   "HTML",
