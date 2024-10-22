@@ -10,7 +10,10 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
   const ref = useRef(null);
   useScroll({ target: "", offset: ["0 1", "1.33 1"] });
   return (
-    <section className="group bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative mb-3 sm:mb-8 last:mb-0 even:pl-8 hover:bg-gray-200 transition">
+    <section
+      ref={ref}
+      className="group bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative mb-3 sm:mb-8 last:mb-0 even:pl-8 hover:bg-gray-200 transition"
+    >
       <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full group-even:ml-[18rem]">
         <h3 className="text-2xl font-semibold">{title}</h3>
         <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
