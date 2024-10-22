@@ -15,6 +15,7 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
     <motion.div
       ref={ref}
@@ -24,11 +25,12 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative group-even:pl-8 hover:bg-gray-200 transition">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
+      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:group-even:pl-8 hover:bg-gray-200 transition">
+        {/* Mobile version */}
+        <div className="block sm:hidden p-4">
+          <h3 className="text-xl font-semibold flex items-center">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-8">
+          <ul className="flex flex-wrap mt-4 gap-2">
             {tags.map((tag, index) => (
               <li
                 className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
@@ -38,26 +40,54 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
               </li>
             ))}
           </ul>
+          <div className="mt-4">
+            <Image
+              src={imageUrl}
+              alt="Project I worked on"
+              quality={95}
+              className="w-full rounded-lg shadow-2xl"
+            />
+          </div>
         </div>
 
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          className="absolute top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl 
-          transition
-          group-hover:scale-[1.04]
-          group-hover:-translate-x-3
-          group-hover:translate-y-3
-          group-hover:-rotate-2
+        {/* Desktop version */}
+        <div className="hidden sm:block">
+          <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full group-even:ml-[18rem]">
+            <h3 className="text-2xl font-semibold flex items-center">
+              {title}
+            </h3>
+            <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
+            <ul className="flex flex-wrap mt-4 gap-2 sm:mt-8">
+              {tags.map((tag, index) => (
+                <li
+                  className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
+                  key={index}
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          group-even:group-hover:translate-x-3
-          group-even:group-hover:translate-y-3
-          group-even:group-hover:rotate-2
+          <Image
+            src={imageUrl}
+            alt="Project I worked on"
+            quality={95}
+            className="absolute top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl 
+            transition
+            group-hover:scale-[1.04]
+            group-hover:-translate-x-3
+            group-hover:translate-y-3
+            group-hover:-rotate-2
 
-          group-even:right-[initial]
-          group-even:-left-40"
-        />
+            group-even:group-hover:translate-x-3
+            group-even:group-hover:translate-y-3
+            group-even:group-hover:rotate-2
+
+            group-even:right-[initial]
+            group-even:-left-40"
+          />
+        </div>
       </section>
     </motion.div>
   );
