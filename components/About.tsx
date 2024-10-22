@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/lib/context/active-section-context";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 const About = () => {
   const { ref, inView } = useInView({
     threshold: 0.75,

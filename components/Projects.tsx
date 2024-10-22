@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 import { projectsData } from "@/lib/data";
 import Project from "./Project";
 import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/lib/context/active-section-context";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 const Projects = () => {
   const { ref, inView } = useInView({
