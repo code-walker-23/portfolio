@@ -143,17 +143,28 @@ export const skillsData = [
 
 export const educationData = [
   {
-    title: "B.Tech., Computer Science",
-    college: "Anand Engineering College",
-    percentage: "Percentage: 75%",
+    title: "Bachelor of Technology",
+    edu: "Anand Engineering College",
+    description:
+      "Acquired in-depth knowledge of computer science fundamentals, software development, and data structures. Developed skills in programming languages such as Java and Python, and gained hands-on experience through various projects.",
     icon: React.createElement(FaGraduationCap),
     date: "October 2021 – Present",
   },
   {
     title: "Senior Secondary",
-    college: "St Andrews Senior Secondary School",
-    percentage: "Percentage: 75%",
+    edu: "St Andrews Senior Secondary School",
+    description:
+      "Developed a strong foundation in mathematics and science, which enhanced analytical and problem-solving skills. Participated in various extracurricular activities that fostered teamwork and leadership.",
     icon: React.createElement(FaSchool),
     date: "2019 – 2021",
+  },
+  {
+    title: "High School",
+    edu: "Agra Vanasthali Vidyalaya",
+    description:
+      "Gained foundational knowledge in various subjects and developed critical thinking skills. Engaged in sports and extracurricular activities that contributed to personal growth.",
+    icon: React.createElement(FaSchool),
+
+    date: "2017 – 2019",
   },
 ] as const;
