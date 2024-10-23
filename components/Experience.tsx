@@ -46,7 +46,7 @@ const Experience = () => {
             <h3 className="font-semibold text-lg text-gray-800">
               {experience.title}
             </h3>
-            <p className="font-medium text-md text-gray-700 italic">
+            <p className="font-medium text-md text-gray-600 italic">
               {experience.company}
             </p>
             <p className="mt-1 text-gray-600">{experience.description}</p>

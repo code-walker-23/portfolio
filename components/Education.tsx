@@ -42,7 +42,9 @@ const Education = () => {
             }}
           >
             <h3 className="font-semibold text-lg">{item.title}</h3>
-            <p className="font-normal text-md text-gray-800">{item.edu}</p>
+            <p className="font-medium text-md text-gray-600 italic">
+              {item.edu}
+            </p>
             <p className="mt-1 text-gray-600">{item.description}</p>
           </VerticalTimelineElement>
         ))}
