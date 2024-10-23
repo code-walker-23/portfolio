@@ -40,7 +40,7 @@ export const links = [
 export const experiencesData = [
   {
     title: "Microsoft Learn Student Ambassador",
-    location: "Remote",
+    company: "Microsoft",
     description:
       "Gained practical experience with React.js and Microsoft Azure by building a personal portfolio and applying basic OOP principles. Participated in global discussions on JavaScript best practices, recognized for dedication to community development and technical knowledge sharing.",
     icon: React.createElement(CgWorkAlt),
@@ -48,7 +48,7 @@ export const experiencesData = [
   },
   {
     title: "Campus Ambassador",
-    location: "Remote",
+    company: "Coding Ninja",
     description:
       "Gained in-depth knowledge of algorithms, data structures, and problem-solving by attending workshops, enhancing personal coding proficiency. Strengthened leadership and organizational skills through coordinating and leading coding events, such as hackathons and webinars.",
     icon: React.createElement(CgWorkAlt),
