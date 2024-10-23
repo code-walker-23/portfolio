@@ -1,21 +1,11 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { useSectionInView } from "@/hooks/useSectionInView";
+
 const About = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.75,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-  // do not set state during rendering always use useffect
-  useEffect(() => {
-    // disabling for a second when we clicking other sections -> it acts as observer
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("About");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView({ threshold: 0.75, sectionName: "About" });
 
   return (
     <motion.section

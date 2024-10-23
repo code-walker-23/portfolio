@@ -2,14 +2,12 @@
 import Image from "next/image";
 import React, { useRef } from "react";
 import { useScroll, useTransform } from "framer-motion";
-import { projectsData } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 import { FaArrowTrendUp } from "react-icons/fa6";
-
-type ProjectProps = (typeof projectsData)[number];
+import { ProjectProps } from "@/lib/types";
 
 function Project({
   title,

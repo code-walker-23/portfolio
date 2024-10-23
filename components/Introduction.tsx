@@ -1,25 +1,16 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
 const Introduction = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection } = useActiveSectionContext();
-  // do not set state during rendering always use useffect
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView({ threshold: 0.5, sectionName: "Home" });
+
   return (
     <section
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
