@@ -148,7 +148,7 @@ export const educationData = [
     description:
       "Acquired in-depth knowledge of computer science fundamentals, software development, and data structures. Developed skills in programming languages such as Java and Python, and gained hands-on experience through various projects.",
     icon: React.createElement(FaGraduationCap),
-    date: "October 2021 – Present",
+    date: "Sep 2021 – Present",
   },
   {
     title: "Senior Secondary",
@@ -156,7 +156,7 @@ export const educationData = [
     description:
       "Developed a strong foundation in mathematics and science, which enhanced analytical and problem-solving skills. Participated in various extracurricular activities that fostered teamwork and leadership.",
     icon: React.createElement(FaSchool),
-    date: "2019 – 2021",
+    date: "Jul 2019 – Aug 2021",
   },
   {
     title: "High School",
@@ -165,6 +165,6 @@ export const educationData = [
       "Gained foundational knowledge in various subjects and developed critical thinking skills. Engaged in sports and extracurricular activities that contributed to personal growth.",
     icon: React.createElement(FaSchool),
 
-    date: "2017 – 2019",
+    date: "May 2017 – Jun 2019",
   },
 ] as const;
