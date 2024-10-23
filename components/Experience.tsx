@@ -1,11 +1,10 @@
 "use client";
+import { useSectionInView } from "@/hooks/useSectionInView";
+import SectionHeading from "./SectionHeading";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import { useSectionInView } from "@/hooks/useSectionInView";
-import SectionHeading from "./SectionHeading";
 import { experiencesData } from "@/lib/data";
 
 const Experience = () => {
@@ -17,7 +16,7 @@ const Experience = () => {
   return (
     <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40" ref={ref}>
       <SectionHeading>Experience</SectionHeading>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor="#9ca3ef">
         {experiencesData.length > 0 ? (
           experiencesData.map((experience, index) => (
             <VerticalTimelineElement
@@ -25,9 +24,9 @@ const Experience = () => {
               contentStyle={{
                 background: "#f3f4f6",
                 boxShadow: "none",
-                border: "1px solid rgba(0,0,0,0.05)",
+                border: "1px solid rgba(0,0,0,0.1)",
                 textAlign: "left",
-                padding: "1.3rem 2rem",
+                padding: "1.5rem 2rem",
               }}
               contentArrowStyle={{
                 borderRight: "0.4rem solid #9ca3ef",
@@ -36,14 +35,15 @@ const Experience = () => {
               icon={experience.icon}
               iconStyle={{
                 background: "white",
+                color: "#4f46e5",
                 fontSize: "1.5rem",
+                padding: "0.5rem",
+                borderRadius: "50%",
               }}
             >
-              <h3 className="font-semibold capitalize">{experience.title}</h3>
-              <p className="font-normal !mt-0">{experience.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700">
-                {experience.description}
-              </p>
+              <h3 className="font-semibold text-lg">{experience.title}</h3>
+              <p className="font-normal text-md text-gray-800">{experience.location}</p>
+              <p className="mt-1 text-gray-600">{experience.description}</p>
             </VerticalTimelineElement>
           ))
         ) : (
