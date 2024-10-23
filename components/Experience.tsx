@@ -7,7 +7,6 @@ import "react-vertical-timeline-component/style.min.css";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import SectionHeading from "./SectionHeading";
 import { experiencesData } from "@/lib/data";
-import React from "react";
 
 const Experience = () => {
   const { ref } = useSectionInView({
@@ -19,18 +18,26 @@ const Experience = () => {
     <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40" ref={ref}>
       <SectionHeading>Experience</SectionHeading>
       <VerticalTimeline>
-        {experiencesData.map((experience, index) => (
-          <VerticalTimelineElement
-            key={index} // Ideally, use a unique identifier
-            date={experience.date} // Ensure each experience has a date property
-            icon={experience.icon} // Use the icon from the data
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }} // Customize icon style
-          >
-            <h3>{experience.title}</h3> {/* Use title instead of location */}
-            <h4>{experience.location}</h4> {/* Display location separately */}
-            <p>{experience.description}</p>
+        {experiencesData.length > 0 ? (
+          experiencesData.map((experience, index) => (
+            <VerticalTimelineElement
+              key={index}
+              contentStyle={{
+                background: "#f3f4f6",
+                boxShadow: "none",
+                border: "1px solid rgba(0,0,0,0.05)",
+              }}
+            >
+              <h3>{experience.title}</h3>
+              <h4>{experience.location}</h4>
+              <p>{experience.description}</p>
+            </VerticalTimelineElement>
+          ))
+        ) : (
+          <VerticalTimelineElement>
+            <h3>No experiences available.</h3>
           </VerticalTimelineElement>
-        ))}
+        )}
       </VerticalTimeline>
     </section>
   );
