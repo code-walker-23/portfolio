@@ -2,7 +2,6 @@ import urlShortener from "../public/url-shortener.png";
 import schedullr from "../public/schedullr.png";
 import jobPortal from "../public/job-portal.png";
 import sortingVisualizer from "../public/sorting-visualizer.png";
-import { LuGraduationCap } from "react-icons/lu";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 
@@ -43,7 +42,7 @@ export const experiencesData = [
     location: "Remote",
     description:
       "Gained practical experience with React.js and Microsoft Azure by building a personal portfolio and applying basic OOP principles. Participated in global discussions on JavaScript best practices, recognized for dedication to community development and technical knowledge sharing.",
-    icon: React.createElement(LuGraduationCap),
+    icon: React.createElement(CgWorkAlt),
     date: "Sep 2023 – Jul 2024",
   },
   {
