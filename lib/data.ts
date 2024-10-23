@@ -2,6 +2,9 @@ import urlShortener from "../public/url-shortener.png";
 import schedullr from "../public/schedullr.png";
 import jobPortal from "../public/job-portal.png";
 import sortingVisualizer from "../public/sorting-visualizer.png";
+import { LuGraduationCap } from "react-icons/lu";
+import React from "react";
+import { CgWorkAlt } from "react-icons/cg";
 
 export const links = [
   {
@@ -34,32 +37,26 @@ export const links = [
   },
 ] as const;
 
-// export const experiencesData = [
-//   {
-//     title: "Graduated bootcamp",
-//     location: "Miami, FL",
-//     description:
-//       "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-//     icon: React.createElement(LuGraduationCap),
-//     date: "2019",
-//   },
-//   {
-//     title: "Front-End Developer",
-//     location: "Orlando, FL",
-//     description:
-//       "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-//     icon: React.createElement(CgWorkAlt),
-//     date: "2019 - 2021",
-//   },
-//   {
-//     title: "Full-Stack Developer",
-//     location: "Houston, TX",
-//     description:
-//       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-//     icon: React.createElement(FaReact),
-//     date: "2021 - present",
-//   },
-// ] as const;
+export const experiencesData = [
+  {
+    title: "Microsoft Learn Student Ambassador",
+    location: "Remote",
+    description:
+      "Gained practical experience with React.js and Microsoft Azure by building a personal portfolio and applying basic OOP principles. Participated in global discussions on JavaScript best practices, recognized for dedication to community development and technical knowledge sharing.",
+    icon: React.createElement(LuGraduationCap),
+    date: "Sep 2023 – Jul 2024",
+  },
+  {
+    title: "Campus Ambassador",
+    location: "Remote",
+    description:
+      "Gained in-depth knowledge of algorithms, data structures, and problem-solving by attending workshops, enhancing personal coding proficiency. Strengthened leadership and organizational skills through coordinating and leading coding events, such as hackathons and webinars.",
+    icon: React.createElement(CgWorkAlt),
+    // icon: <CgWorkAlt/>, this can be used when file is .tsx
+
+    date: "May 2023 – Sep 2023",
+  },
+] as const;
 
 export const projectsData = [
   {
