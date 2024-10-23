@@ -8,13 +8,14 @@ const About = () => {
   const { ref, inView } = useInView({
     threshold: 0.75,
   });
-  const { setActiveSection } = useActiveSectionContext();
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
   // do not set state during rendering always use useffect
   useEffect(() => {
-    if (inView) {
+    // disabling for a second when we clicking other sections -> it acts as observer
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("About");
     }
-  }, [inView, setActiveSection]);
+  }, [inView, setActiveSection, timeOfLastClick]);
 
   return (
     <motion.section

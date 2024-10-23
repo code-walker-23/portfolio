@@ -10,13 +10,15 @@ const Projects = () => {
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
-  const { setActiveSection } = useActiveSectionContext();
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
   // do not set state during rendering always use useffect
   useEffect(() => {
-    if (inView) {
+    // disabling for a second when we clicking other sections -> it acts as observer
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("Projects");
     }
-  }, [inView, setActiveSection]);
+  }, [inView, setActiveSection, timeOfLastClick]);
+  
   return (
     <section className="scroll-mt-28" id="projects" ref={ref}>
       <SectionHeading>My Projects</SectionHeading>
