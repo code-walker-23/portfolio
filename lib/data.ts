@@ -4,6 +4,7 @@ import jobPortal from "../public/job-portal.png";
 import sortingVisualizer from "../public/sorting-visualizer.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
+import { FaGraduationCap, FaSchool } from "react-icons/fa";
 
 export const links = [
   {
@@ -138,4 +139,21 @@ export const skillsData = [
   "Express",
   "PostgreSQL",
   "Framer Motion",
+] as const;
+
+export const educationData = [
+  {
+    title: "B.Tech., Computer Science",
+    college: "Anand Engineering College",
+    percentage: "Percentage: 75%",
+    icon: React.createElement(FaGraduationCap),
+    date: "October 2021 – Present",
+  },
+  {
+    title: "Senior Secondary",
+    college: "St Andrews Senior Secondary School",
+    percentage: "Percentage: 75%",
+    icon: React.createElement(FaSchool),
+    date: "2019 – 2021",
+  },
 ] as const;
