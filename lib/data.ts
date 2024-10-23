@@ -74,7 +74,7 @@ export const projectsData = [
     ],
     imageUrl: jobPortal,
     liveLink: "",
-    githubLink: "",
+    githubLink: "https://github.com/code-walker-23/job-portal",
   },
   {
     title: "Schedullr",
@@ -91,7 +91,7 @@ export const projectsData = [
     ],
     imageUrl: schedullr,
     liveLink: "",
-    githubLink: "",
+    githubLink: "https://github.com/code-walker-23/schedullr",
   },
   {
     title: "Linkeat",
@@ -108,7 +108,7 @@ export const projectsData = [
     ],
     imageUrl: urlShortener,
     liveLink: "",
-    githubLink: "",
+    githubLink: "https://github.com/code-walker-23/url-shortener",
   },
   {
     title: "Sorting Visualizer",
