@@ -45,7 +45,7 @@ const Education = () => {
             <p className="font-medium text-md text-gray-600 italic">
               {item.edu}
             </p>
-            <p className="mt-1 text-gray-600">{item.description}</p>
+            <p className="mt-1 text-gray-500">{item.description}</p>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>

@@ -49,7 +49,7 @@ const Experience = () => {
             <p className="font-medium text-md text-gray-600 italic">
               {experience.company}
             </p>
-            <p className="mt-1 text-gray-600">{experience.description}</p>
+            <p className="mt-1 text-gray-500">{experience.description}</p>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
