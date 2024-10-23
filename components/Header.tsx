@@ -60,7 +60,6 @@ const Header = () => {
 
       {/* {Mobile version} */}
       <nav className="fixed top-0 left-1/2 -translate-x-1/2 w-full flex items-center justify-between p-4 bg-white shadow-md sm:hidden">
-        {/* Hamburger Menu */}
         <button
           onClick={toggleMenu}
           className="flex flex-col justify-center items-center space-y-1"
@@ -71,7 +70,6 @@ const Header = () => {
           <span className="block w-8 h-1 bg-gray-600"></span>
         </button>
       </nav>
-      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <motion.div
           className="fixed inset-0 z-50 bg-gray-800 bg-opacity-90 flex items-center justify-center"
@@ -79,8 +77,16 @@ const Header = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <div className="text-white">
-            <ul className="flex flex-col items-center space-y-6">
+          <div className="text-white w-full h-full flex flex-col items-center relative">
+            <button
+              onClick={toggleMenu}
+              className="absolute top-4 right-4 text-white text-3xl"
+              aria-label="Close menu"
+            >
+              &times;
+            </button>
+
+            <ul className="flex flex-col items-center space-y-6 mt-16">
               {links.map((link) => (
                 <li key={link.hash}>
                   <Link
