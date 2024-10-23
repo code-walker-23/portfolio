@@ -35,6 +35,7 @@ const Header = () => {
                 onClick={() => {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
+                  // console.log("Clicked from handle fun -> ", link.name); for tracking the observers
                 }}
               >
                 {link.name}

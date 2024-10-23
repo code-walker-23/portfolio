@@ -10,7 +10,7 @@ type SectionViewProp = {
 
 export function useSectionInView({ threshold, sectionName }: SectionViewProp) {
   const { ref, inView } = useInView({
-    threshold: threshold,
+    threshold,
   });
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
   // do not set state during rendering always use useffect
@@ -18,6 +18,7 @@ export function useSectionInView({ threshold, sectionName }: SectionViewProp) {
     // disabling for a second when we clicking other sections -> it acts as observer -> ignore all obervers for less than a second
     if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection(sectionName);
+      // console.log("View Section fun -> ", sectionName); // for tracking the observers
     }
   }, [inView, setActiveSection, timeOfLastClick, sectionName]);
   return { ref };

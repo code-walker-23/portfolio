@@ -7,7 +7,8 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 import { FaArrowTrendUp } from "react-icons/fa6";
-import { ProjectProps } from "@/lib/types";
+// writing type for extra clarity
+import type { ProjectProps } from "@/lib/types";
 
 function Project({
   title,
