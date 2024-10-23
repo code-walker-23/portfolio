@@ -16,28 +16,29 @@ const Education = () => {
   return (
     <section ref={ref} id="education" className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>Education</SectionHeading>
-      <VerticalTimeline lineColor="#9ca3ef">
+      <VerticalTimeline lineColor="">
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
             contentStyle={{
-              background: "#f3f4f6",
-              boxShadow: "none",
-              border: "1px solid rgba(0,0,0,0.1)",
+              background: "#ffffff",
+              boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+              border: "1px solid #e5e7eb",
               textAlign: "left",
               padding: "1.5rem 2rem",
+              borderRadius: "8px",
             }}
             contentArrowStyle={{
-              borderRight: "0.4rem solid #9ca3ef",
+              borderRight: "0.4rem solid #9ca3af",
             }}
             date={item.date}
             icon={item.icon}
             iconStyle={{
-              background: "white",
-              color: "#4f46e5",
+              background: "#ffffff",
               fontSize: "1.5rem",
               padding: "0.5rem",
               borderRadius: "50%",
+              boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
             }}
           >
             <h3 className="font-semibold text-lg">{item.title}</h3>

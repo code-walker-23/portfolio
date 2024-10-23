@@ -17,7 +17,7 @@ const Experience = () => {
   return (
     <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40" ref={ref}>
       <SectionHeading>Experience</SectionHeading>
-      <VerticalTimeline lineColor="#9ca3ef">
+      <VerticalTimeline lineColor="">
         {experiencesData.length > 0 ? (
           experiencesData.map((experience, index) => (
             <VerticalTimelineElement
@@ -31,21 +31,25 @@ const Experience = () => {
                 borderRadius: "8px",
               }}
               contentArrowStyle={{
-                borderRight: "0.4rem solid #9ca3ef",
+                borderRight: "0.4rem solid #9ca3af",
               }}
               date={experience.date}
               icon={experience.icon}
               iconStyle={{
                 background: "#ffffff",
-                color: "#4f46e5",
+
                 fontSize: "1.5rem",
                 padding: "0.5rem",
                 borderRadius: "50%",
                 boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
               }}
             >
-              <h3 className="font-semibold text-lg text-gray-800">{experience.title}</h3>
-              <p className="font-medium text-md text-gray-700">{experience.location}</p>
+              <h3 className="font-semibold text-lg text-gray-800">
+                {experience.title}
+              </h3>
+              <p className="font-medium text-md text-gray-700">
+                {experience.location}
+              </p>
               <p className="mt-1 text-gray-600">{experience.description}</p>
             </VerticalTimelineElement>
           ))
