@@ -72,27 +72,33 @@ const Header = () => {
       </nav>
       {isMenuOpen && (
         <motion.div
-          className="fixed inset-0 z-50 bg-gray-800 bg-opacity-90 flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-white bg-opacity-85 flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <div className="text-white w-full h-full flex flex-col items-center relative">
+          <div className="w-full h-full flex flex-col items-center relative">
             <button
               onClick={toggleMenu}
-              className="absolute top-4 right-4 text-white text-3xl"
+              className="absolute top-4 right-4 bg-gray-100 rounded-full px-2 py-1 transition-all duration-300 ease-in-out text-gray-600 hover:bg-gray-200 hover:text-gray-950 text-3xl transform hover:scale-110"
               aria-label="Close menu"
             >
               &times;
             </button>
 
-            <ul className="flex flex-col items-center space-y-6 mt-16">
+            <ul className="flex flex-col items-center space-y-6 mt-36">
               {links.map((link) => (
                 <li key={link.hash}>
                   <Link
-                    className={clsx("text-xl hover:text-gray-300 transition", {
-                      "text-gray-500 ": activeSection === link.name,
-                    })}
+                    className={clsx(
+                      "text-xl font-semibold transition py-3 px-5 rounded-full ",
+                      {
+                        "bg-gray-100 text-gray-950":
+                          activeSection === link.name,
+                        "text-gray-500 hover:text-gray-950":
+                          activeSection !== link.name,
+                      }
+                    )}
                     href={link.hash}
                     onClick={() => {
                       setActiveSection(link.name);
