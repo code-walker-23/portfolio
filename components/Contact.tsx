@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React from "react";
 import SectionHeading from "./SectionHeading";
@@ -44,7 +45,13 @@ const Contact = () => {
       <form
         className="mt-10 flex flex-col"
         action={async (formData) => {
-          sendEmail(formData);
+          const { data, error } = await sendEmail(formData);
+          if (error) {
+            alert(error);
+            return;
+          }
+          console.log(error);
+          alert("Email sent successfully");
         }}
       >
         <input
