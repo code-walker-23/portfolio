@@ -91,6 +91,9 @@ const Header = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
+          <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+
+          <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem]  sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
           <div className="w-full h-full flex flex-col items-center relative">
             <button
               onClick={toggleMenu}
@@ -107,9 +110,8 @@ const Header = () => {
                     className={clsx(
                       "text-xl font-semibold transition py-3 px-5 rounded-full ",
                       {
-                        "bg-gray-200 text-gray-950":
-                          activeSection === link.name,
-                        "text-gray-500 hover:text-gray-950":
+                        "bg-white text-gray-800": activeSection === link.name,
+                        "text-gray-500 hover:text-gray-700":
                           activeSection !== link.name,
                       }
                     )}
