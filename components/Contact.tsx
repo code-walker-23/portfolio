@@ -46,11 +46,11 @@ const Contact = () => {
         className="mt-10 flex flex-col"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
-          if (error) {
-            alert(error);
+          if (data?.error?.message) {
+            alert(data.error.message);
             return;
           }
-          console.log(error);
+          // console.log(error); it is giving undefined
           alert("Email sent successfully");
         }}
       >
