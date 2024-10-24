@@ -4,8 +4,7 @@ import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
-
-const handleSubmit = () => {};
+import { sendEmail } from "@/actions/sendEmail";
 
 const Contact = () => {
   const { ref } = useSectionInView({
@@ -44,13 +43,16 @@ const Contact = () => {
       </p>
       <form
         className="mt-10 flex flex-col"
-        onSubmit={handleSubmit}
-        action={(formData) => {
-          console.log(formData);
+        action={async (formData) => {
+          console.log("Running on client");
+          console.log(formData.get("senderEmail"));
+          console.log(formData.get("message"));
+          await sendEmail(formData);
         }}
       >
         <input
           type="email"
+          name="senderEmail"
           className="px-4 h-14 rounded-lg border border-black/10"
           required
           maxLength={500}
@@ -58,6 +60,7 @@ const Contact = () => {
         />
         <textarea
           className="h-52 my-3 rounded-lg border border-black/10 p-4"
+          name="message"
           placeholder="Your message"
           required
           maxLength={500}
