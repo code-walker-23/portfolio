@@ -4,7 +4,29 @@ import jobPortal from "../public/job-portal.png";
 import sortingVisualizer from "../public/sorting-visualizer.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaGraduationCap, FaSchool } from "react-icons/fa";
+import {
+  FaCss3Alt,
+  FaGitAlt,
+  FaGraduationCap,
+  FaHtml5,
+  FaJsSquare,
+  FaNodeJs,
+  FaReact,
+  FaSchool,
+} from "react-icons/fa";
+import {
+  SiApollographql,
+  SiExpress,
+  SiFramer,
+  SiGraphql,
+  SiMongodb,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiRedux,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 export const links = [
   {
@@ -122,23 +144,23 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Framer Motion",
+  { name: "HTML", icon: FaHtml5 },
+  { name: "CSS", icon: FaCss3Alt },
+  { name: "JavaScript", icon: FaJsSquare },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "React", icon: FaReact },
+  { name: "Next.js", icon: SiNextdotjs },
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "Git", icon: FaGitAlt },
+  { name: "Tailwind", icon: SiTailwindcss },
+  { name: "Prisma", icon: SiPrisma },
+  { name: "MongoDB", icon: SiMongodb },
+  { name: "Redux", icon: SiRedux },
+  { name: "GraphQL", icon: SiGraphql },
+  { name: "Apollo", icon: SiApollographql },
+  { name: "Express", icon: SiExpress },
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "Framer Motion", icon: SiFramer },
 ] as const;
 
 export const educationData = [

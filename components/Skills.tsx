@@ -3,6 +3,7 @@ import { useSectionInView } from "@/hooks/useSectionInView";
 import SectionHeading from "./SectionHeading";
 import { skillsData } from "@/lib/data";
 import { motion } from "framer-motion";
+import React from "react";
 
 const fadeInAnimationsVariants = {
   initial: {
@@ -33,16 +34,15 @@ const Skills = () => {
         {skillsData.map((skill, index) => (
           <motion.li
             key={index}
-            className="bg-white border border-black/[0.1] rounded-xl px-5 py-3 font-semibold"
+            className="bg-white border border-black/[0.1] rounded-xl px-5 py-3 font-semibold flex items-center"
             variants={fadeInAnimationsVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{
-              once: true,
-            }}
+            viewport={{ once: true }}
             custom={index}
           >
-            {skill}
+            {React.createElement(skill.icon, { className: "mr-2 text-2xl" })}
+            {skill.name}
           </motion.li>
         ))}
       </ul>
