@@ -16,7 +16,7 @@ export const sendEmail = async (formData: FormData) => {
       from: "vinaychhabra786@gmail.com",
       to: "chhabravinay549@gmail.com",
       subject: "Message from contact form",
-      text: "Hello World!", // Use the message from formData or a default
+      text: "Hello World!",
     });
     console.log("Email sent successfully:", response);
   } catch (error) {
