@@ -2,9 +2,9 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/hooks/useSectionInView";
-import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
+import SubmitButton from "./SubmitButton";
 
 const Contact = () => {
   const { ref } = useSectionInView({
@@ -62,13 +62,7 @@ const Contact = () => {
           required
           maxLength={500}
         />
-        <button
-          type="submit"
-          className="group h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all flex items-center justify-center gap-2 focus:scale-110 hover:scale-105 active:scale-105 hover:bg-gray-950"
-        >
-          Submit{" "}
-          <FaPaperPlane className="text-xs opacity-70 transition-all  group-hover:translate-x-1 group-hover:-translate-y-1" />
-        </button>
+        <SubmitButton />
       </form>
     </motion.section>
   );
