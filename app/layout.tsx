@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import ActiveSectionProvider from "@/context/ActiveSectionContext";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <ActiveSectionProvider>
           <Header />
           {children}
+          <Toaster position="top-right" />
         </ActiveSectionProvider>
       </body>
     </html>

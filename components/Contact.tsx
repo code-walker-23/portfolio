@@ -6,6 +6,7 @@ import { useSectionInView } from "@/hooks/useSectionInView";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitButton from "./SubmitButton";
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const { ref } = useSectionInView({
@@ -47,11 +48,11 @@ const Contact = () => {
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
           if (data?.error?.message) {
-            alert(data.error.message);
+            toast.error("Something went wrong, please try again later!");
             return;
           }
           // console.log(error); it is giving undefined
-          alert("Email sent successfully");
+          toast.success("Email sent successfully!");
         }}
       >
         <input
