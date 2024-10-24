@@ -30,7 +30,7 @@ const Skills = () => {
       id="skills"
     >
       <SectionHeading>My Skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-600">
         {skillsData.map((skill, index) => (
           <motion.li
             key={index}
@@ -41,7 +41,9 @@ const Skills = () => {
             viewport={{ once: true }}
             custom={index}
           >
-            {React.createElement(skill.icon, { className: "mr-2 text-2xl" })}
+            {React.createElement(skill.icon, {
+              className: "mr-2 text-2xl text-gray-800",
+            })}
             {skill.name}
           </motion.li>
         ))}
