@@ -7,9 +7,11 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/hooks/useSectionInView";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 const Introduction = () => {
   const { ref } = useSectionInView({ threshold: 0.5, sectionName: "Home" });
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -76,6 +78,10 @@ const Introduction = () => {
         <Link
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -84,7 +90,7 @@ const Introduction = () => {
         <a
           className=" group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 
           hover:text-gray-950 transition cursor-pointer border border-black/10"
-          href="/Vinay_Updated_Resume_Template.pdf"
+          href="/vinay-resume.pdf"
           download={true}
         >
           Download Resume

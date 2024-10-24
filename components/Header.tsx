@@ -107,7 +107,7 @@ const Header = () => {
                     className={clsx(
                       "text-xl font-semibold transition py-3 px-5 rounded-full ",
                       {
-                        "bg-gray-100 text-gray-950":
+                        "bg-gray-200 text-gray-950":
                           activeSection === link.name,
                         "text-gray-500 hover:text-gray-950":
                           activeSection !== link.name,
