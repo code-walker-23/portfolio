@@ -41,7 +41,12 @@ const Contact = () => {
         </a>{" "}
         or through this form
       </p>
-      <form className="mt-10 flex flex-col" action={sendEmail}>
+      <form
+        className="mt-10 flex flex-col"
+        action={async (formData) => {
+          sendEmail(formData);
+        }}
+      >
         <input
           type="email"
           name="senderEmail"
