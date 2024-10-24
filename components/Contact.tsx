@@ -6,7 +6,7 @@ import { useSectionInView } from "@/hooks/useSectionInView";
 const Contact = () => {
   const { ref } = useSectionInView({
     sectionName: "Contact",
-    threshold: 0.5,
+    threshold: 0.75,
   });
 
   return (
