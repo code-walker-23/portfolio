@@ -37,30 +37,24 @@ function Project({
       <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:group-even:pl-8 hover:bg-gray-200 transition dark:bg-white/10 dark:hover:bg-white/20 dark:text-white">
         {/* Mobile version */}
         <div className="block sm:hidden p-4">
-          <h3 className="text-xl font-semibold flex items-center">
-            {title}
+          <div className="flex items-center gap-2">
+            <h3 className="text-xl font-semibold mr-2">{title}</h3>
             <Link
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="focus:scale-110 hover:scale-110 active:scale-105 
-          hover:text-gray-950 transition ml-3 dark:text-white/60 hover:dark:text-white/90"
+              className="transition duration-300 transform hover:text-gray-950 mr-2 dark:text-white/60 hover:dark:text-white/90"
             >
-              <div className="flex mr-1">
-                <FaGithub />
-              </div>
+              <FaGithub className="text-xl" />
             </Link>
             <Link
               href={liveLink}
               rel="noopener noreferrer"
-              className="focus:scale-110 hover:scale-110 active:scale-105 
-          hover:text-gray-950 transition ml-3 dark:text-white/60 hover:dark:text-white/90"
+              className="transition duration-300 transform hover:text-gray-950 dark:text-white/60 hover:dark:text-white/90"
             >
-              <div className="flex">
-                <FaLink />
-              </div>
+              <FaLink className="text-xl" />
             </Link>
-          </h3>
+          </div>
 
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
@@ -94,8 +88,8 @@ function Project({
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 dark:text-white/60 hover:dark:text-white/90 ml-4 focus:scale-110 hover:scale-110 active:scale-105 
-          hover:text-gray-950 transition"
+                className="text-gray-700 dark:text-white/60 hover:dark:text-white/90 ml-4
+          hover:text-gray-950"
               >
                 <div className="flex mr-1">
                   <FaGithub />
@@ -104,8 +98,7 @@ function Project({
               <Link
                 href={liveLink}
                 rel="noopener noreferrer"
-                className="dark:text-white/60 hover:dark:text-white/90 text-gray-700 ml-3 focus:scale-110 hover:scale-110 active:scale-105 
-          hover:text-gray-950 transition "
+                className="dark:text-white/60 hover:dark:text-white/90 text-gray-700 ml-3 hover:text-gray-950"
               >
                 <div className="flex mr-1">
                   <FaLink />
