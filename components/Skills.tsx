@@ -34,7 +34,7 @@ const Skills = () => {
         {skillsData.map((skill, index) => (
           <motion.li
             key={index}
-            className="bg-white border border-black/[0.1] rounded-xl px-5 py-3 font-semibold flex items-center dark:bg-white/10 dark:text-white/80"
+            className="group bg-white border border-black/[0.1] rounded-xl px-5 py-3 font-semibold flex items-center dark:bg-white/10 dark:text-white/80 cursor-pointer"
             variants={fadeInAnimationsVariants}
             initial="initial"
             whileInView="animate"
@@ -42,7 +42,8 @@ const Skills = () => {
             custom={index}
           >
             {React.createElement(skill.icon, {
-              className: "mr-2 text-2xl text-gray-800   dark:text-white/80",
+              className:
+                "mr-2 text-2xl text-gray-800 group-hover:text-gray-950  dark:text-white/80 group-hover:scale-110 transition group-hover:dark:text-white ",
             })}
             {skill.name}
           </motion.li>
