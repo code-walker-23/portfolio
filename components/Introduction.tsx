@@ -89,7 +89,7 @@ const Introduction = () => {
 
         <a
           className=" group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 
-          hover:text-gray-950 transition cursor-pointer border border-black/10"
+          hover:text-gray-950 transition cursor-pointer border border-black/10  dark:bg-white/10"
           href="/vinay-resume.pdf"
           download={true}
         >
@@ -98,7 +98,7 @@ const Introduction = () => {
         </a>
 
         <a
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10  dark:bg-white/10  dark:text-white/60"
           href="https://www.linkedin.com/in/vinay-chhabra-a377601a9/"
           target="_blank"
           rel="noopener noreferrer"
@@ -108,7 +108,7 @@ const Introduction = () => {
         </a>
 
         <a
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10  dark:text-white/60  dark:bg-white/10"
           href="https://github.com/code-walker-23"
           target="_blank"
           rel="noopener noreferrer"
