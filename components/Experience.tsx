@@ -7,11 +7,13 @@ import "react-vertical-timeline-component/style.min.css";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import SectionHeading from "./SectionHeading";
 import { experiencesData } from "@/lib/data";
+import { useThemeContext } from "@/context/ThemeContext";
 
 const Experience = () => {
+  const { theme } = useThemeContext();
   const { ref } = useSectionInView({
     sectionName: "Experience",
-    threshold: 0.5, 
+    threshold: 0.5,
   });
 
   return (
@@ -22,7 +24,8 @@ const Experience = () => {
           <VerticalTimelineElement
             key={index}
             contentStyle={{
-              background: "#ffffff",
+              background:
+                theme === "light" ? "#f3f4f6" : "rgba(255,255,255,0.05)",
               boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
               border: "1px solid #e5e7eb",
               textAlign: "left",
@@ -30,12 +33,16 @@ const Experience = () => {
               borderRadius: "8px",
             }}
             contentArrowStyle={{
-              borderRight: "0.4rem solid #9ca3af",
+              borderRight:
+                theme === "light"
+                  ? "0.4rem solid #9ca3af"
+                  : "0.4rem solid rgba(255,255,255,0.5)",
             }}
             date={experience.date}
             icon={experience.icon}
             iconStyle={{
-              background: "#ffffff",
+              background:
+                theme === "light" ? "#ffffff" : "rgba(255,255,255,0.5)",
 
               fontSize: "1.5rem",
               padding: "0.5rem",
@@ -49,7 +56,9 @@ const Experience = () => {
             <p className="font-medium text-md text-gray-600 italic">
               {experience.company}
             </p>
-            <p className="mt-1 text-gray-500">{experience.description}</p>
+            <p className="!mt-1 font-normal text-gray-500 dark:text-white/75">
+              {experience.description}
+            </p>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
