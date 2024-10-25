@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import ActiveSectionProvider from "@/context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
+import ThemeSwitch from "@/components/ThemeSwitch";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,8 +40,9 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
-          <Toaster position="top-right" />
         </ActiveSectionProvider>
+        <Toaster position="top-right" />
+        <ThemeSwitch />
       </body>
     </html>
   );
