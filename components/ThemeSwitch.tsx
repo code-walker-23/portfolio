@@ -19,6 +19,8 @@ const ThemeSwitch = () => {
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
     if (localTheme) {
       setTheme(localTheme);
+    } else if (window.matchMedia("prefers-color-scheme: dark").matches) {
+      setTheme("dark");
     }
   }, []);
   console.log(theme);
