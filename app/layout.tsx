@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Style from "@/components/Style";
+import { ThemeContextProvider } from "@/context/ThemeContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,13 +36,15 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
         <Style />
-        <ActiveSectionProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ActiveSectionProvider>
+        <ThemeContextProvider>
+          <ActiveSectionProvider>
+            <Header />
+            {children}
+            <Footer />
+            <ThemeSwitch />
+          </ActiveSectionProvider>
+        </ThemeContextProvider>
         <Toaster position="top-right" />
-        <ThemeSwitch />
       </body>
     </html>
   );
