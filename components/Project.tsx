@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
-import { FaArrowTrendUp } from "react-icons/fa6";
 // writing type for extra clarity
 import type { ProjectProps } from "@/lib/types";
 
@@ -41,22 +40,24 @@ function Project({
           <h3 className="text-xl font-semibold flex items-center">
             {title}
             <Link
-              href={liveLink}
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline ml-3"
-            >
-              <div className="flex">
-                <FaLink className="mr-1" /> <FaArrowTrendUp />
-              </div>
-            </Link>
-            <Link
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 hover:underline ml-3"
+              className="focus:scale-110 hover:scale-110 active:scale-105 
+          hover:text-gray-950 transition ml-3 dark:text-white/60 hover:dark:text-white/90"
+            >
+              <div className="flex mr-1">
+                <FaGithub />
+              </div>
+            </Link>
+            <Link
+              href={liveLink}
+              rel="noopener noreferrer"
+              className="focus:scale-110 hover:scale-110 active:scale-105 
+          hover:text-gray-950 transition ml-3 dark:text-white/60 hover:dark:text-white/90"
             >
               <div className="flex">
-                <FaGithub /> <FaArrowTrendUp />
+                <FaLink />
               </div>
             </Link>
           </h3>
@@ -90,22 +91,24 @@ function Project({
             <h3 className="text-2xl font-semibold flex items-center">
               {title}{" "}
               <Link
-                href={liveLink}
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline ml-3"
-              >
-                <div className="flex">
-                  <FaLink className="mr-1" /> <FaArrowTrendUp />
-                </div>
-              </Link>
-              <Link
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 hover:underline ml-3"
+                className="text-gray-700 dark:text-white/60 hover:dark:text-white/90 ml-4 focus:scale-110 hover:scale-110 active:scale-105 
+          hover:text-gray-950 transition"
               >
-                <div className="flex">
-                  <FaGithub /> <FaArrowTrendUp />
+                <div className="flex mr-1">
+                  <FaGithub />
+                </div>
+              </Link>
+              <Link
+                href={liveLink}
+                rel="noopener noreferrer"
+                className="dark:text-white/60 hover:dark:text-white/90 text-gray-700 ml-3 focus:scale-110 hover:scale-110 active:scale-105 
+          hover:text-gray-950 transition "
+              >
+                <div className="flex mr-1">
+                  <FaLink />
                 </div>
               </Link>
             </h3>
