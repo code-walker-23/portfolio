@@ -59,14 +59,14 @@ const Education = () => {
               {item.title}
             </h3>
             <p
-              className={`font-medium text-md ${
+              className={`font-normal text-md ${
                 theme === "light" ? "text-gray-600" : "text-gray-300"
               } italic`}
             >
               {item.edu}
             </p>
             <p
-              className={`mt-1 ${
+              className={`mt-1 font-light ${
                 theme === "light" ? "text-gray-500" : "text-white/75"
               }`}
             >
