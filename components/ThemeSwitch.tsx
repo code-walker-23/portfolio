@@ -28,7 +28,7 @@ const ThemeSwitch = () => {
       setTheme("dark");
       document.documentElement.classList.add("dark");
     }
-  }, []);
+  }, [setTheme]);
   console.log(theme);
   return (
     <button

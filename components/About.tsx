@@ -20,19 +20,18 @@ const About = () => {
       <p className="mb-3">
         I’ve been immersing myself in{" "}
         <span className="font-medium">
-          React, Next.js, JavaScript, TypeScript,
+          React.js, Next.js, JavaScript, TypeScript,
         </span>{" "}
         and{" "}
         <span className="font-medium">
           Data Structures and Algorithms (DSA)
         </span>
-        . I’m excited to continue learning and growing in these areas. I enjoy
-        tackling new challenges and love building interfaces that are both
-        engaging and visually appealing. My goal is to combine design with
-        functionality, ensuring that each project delivers real value to users.
-        I’ve also gained hands-on experience through internships in web
-        development, which has further fueled my passion for frontend system
-        design.
+        .I'm eager to keep growing in frontend development and technology. I
+        enjoy tackling complex problems and building systems that are both
+        efficient and user-friendly. My goal is to develop solutions that make a
+        real impact. Through my internships in frontend development, I’ve gained
+        valuable experience that has strengthened my skills and passion for
+        creating scalable, high-performance applications.
       </p>
 
       <p>

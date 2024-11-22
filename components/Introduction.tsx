@@ -32,8 +32,8 @@ const Introduction = () => {
             <Image
               src="https://avatars.githubusercontent.com/u/116024992?v=4"
               alt="Vinay Chhabra"
-              width="192"
-              height="192"
+              width="292"
+              height="292"
               quality="95"
               priority={true}
               className="rounded-full h-24 w-24 border-[0.35rem] border-white shadow-xl object-cover dark:border-white/10"
@@ -60,10 +60,10 @@ const Introduction = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Vinay.</span> I'm a{" "}
+        <span className="font-bold">Hello, I'm Vinay Chhabra.</span> I'm a{" "}
         <span className="font-bold">front-end developer</span> with{" "}
-        <span className="font-bold">1 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
+        <span className="font-bold">internship experience</span> in{" "}
+        <span className="italic">building websites</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
       </motion.h1>
 
