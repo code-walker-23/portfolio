@@ -10,12 +10,13 @@ import { FaLink } from "react-icons/fa";
 // import type { ProjectProps } from "@/lib/types";
 
 interface ProjectProps {
+  title: string;
+  description: string;
   tags: string[];
   imageUrl: string;
-  liveLink: "" | "https://cancure-ai.vercel.app/" | "https://hirrd-by-vinay-chhabra.vercel.app/" | "https://schedullr-by-vinay-chhabra.vercel.app/" | "https://sorting-visualizer-by-vinay-chhabra.vercel.app/" | "https://url-shortener-by-vinay-chhabra.vercel.app/";
+  liveLink: string;
   githubLink: string;
 }
-
 
 function Project({
   title,
