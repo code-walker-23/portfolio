@@ -2,6 +2,7 @@ import urlShortener from "../public/url-shortener.png";
 import schedullr from "../public/schedullr.png";
 import jobPortal from "../public/job-portal.png";
 import sortingVisualizer from "../public/sorting-visualizer.png";
+import cancure from "../public/cancure.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import {
@@ -16,16 +17,32 @@ import {
 } from "react-icons/fa";
 import {
   SiApollographql,
+  SiClerk,
+  SiCplusplus,
+  SiCypress,
+  SiDocker,
+  SiDrizzle,
+  SiElastic,
   SiExpress,
+  SiFirebase,
   SiFramer,
   SiGraphql,
+  SiJest,
+  SiKubernetes,
   SiMongodb,
+  SiMysql,
   SiNextdotjs,
+  SiPlaywright,
   SiPostgresql,
   SiPrisma,
+  SiRedis,
   SiRedux,
+  SiSupabase,
   SiTailwindcss,
+  SiThealgorithms,
+  SiTrpc,
   SiTypescript,
+  SiZod,
 } from "react-icons/si";
 
 export const links = [
@@ -82,6 +99,25 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "CanCure AI",
+    description:
+      "An AI-powered platform transforming cancer care with personalized treatment plans. Cancure AI combines real-time data analysis, advanced insights, secure authentication, and an intuitive interface to enhance precision and empower patients and healthcare professionals.",
+    tags: [
+      "React",
+      "Gemini API",
+      "NeonDB",
+      "PostgreSQL",
+      "Clerk",
+      "DND Kit",
+      "Tailwind CSS",
+      "Vite",
+      "Vercel",
+    ],
+    imageUrl: cancure,
+    liveLink: "https://cancure-ai.vercel.app/",
+    githubLink: "https://github.com/code-walker-23/beat-cancer-with-ai",
+  },
+  {
     title: "Hirrd",
     description:
       "A full-stack job portal that allows employers to post job listings and job seekers to apply easily. The platform features real-time application tracking and user authentication for enhanced engagement and security.",
@@ -89,13 +125,15 @@ export const projectsData = [
       "React",
       "Supabase",
       "PostgreSQL",
+      "Clerk",
       "Tailwind CSS",
+      "Vite",
+      "Vercel",
       "React Hook Form",
-      "Zod",
-      "Framer Motion",
+      "Zod Validation",
     ],
     imageUrl: jobPortal,
-    liveLink: "",
+    liveLink: "https://hirrd-by-vinay-chhabra.vercel.app/",
     githubLink: "https://github.com/code-walker-23/job-portal",
   },
   {
@@ -103,17 +141,28 @@ export const projectsData = [
     description:
       "A scheduling application that enables users to book events with real-time availability. It integrates with Google Calendar for seamless event synchronization, featuring customizable booking options and efficient appointment management.",
     tags: [
-      "React",
+      "Next.js",
+      "Google Calendar API",
       "NeonDB",
       "PostgreSQL",
+      "Clerk",
       "Tailwind CSS",
+      "Vercel",
       "React Hook Form",
-      "Zod",
-      "Framer Motion",
+      "Zod Validation",
     ],
     imageUrl: schedullr,
-    liveLink: "",
+    liveLink: "https://schedullr-by-vinay-chhabra.vercel.app/",
     githubLink: "https://github.com/code-walker-23/schedullr",
+  },
+  {
+    title: "Sorting Visualizer",
+    description:
+      "An interactive sorting visualizer that lets users visualize various sorting algorithms in action. Users can customize array values and speeds, providing an engaging educational tool for understanding sorting mechanisms.",
+    tags: ["Next.js", "Typescript", "Tailwind CSS", "Vercel"],
+    imageUrl: sortingVisualizer,
+    liveLink: "https://sorting-visualizer-by-vinay-chhabra.vercel.app/",
+    githubLink: "https://github.com/code-walker-23/sorting-visualizer",
   },
   {
     title: "Linkeat",
@@ -125,42 +174,64 @@ export const projectsData = [
       "PostgreSQL",
       "Tailwind CSS",
       "React Hook Form",
-      "Yup",
-      "Framer Motion",
+      "Yup Validation",
     ],
     imageUrl: urlShortener,
-    liveLink: "",
+    liveLink: "https://url-shortener-by-vinay-chhabra.vercel.app/",
     githubLink: "https://github.com/code-walker-23/url-shortener",
-  },
-  {
-    title: "Sorting Visualizer",
-    description:
-      "An interactive sorting visualizer that lets users visualize various sorting algorithms in action. Users can customize array values and speeds, providing an engaging educational tool for understanding sorting mechanisms.",
-    tags: ["HTML", "Javascript", "Tailwind CSS"],
-    imageUrl: sortingVisualizer,
-    liveLink: "",
-    githubLink: "",
   },
 ] as const;
 
 export const skillsData = [
+  // Computer Science Foundations
+  { name: "Algorithms", icon: SiThealgorithms },
+  { name: "CPP", icon: SiCplusplus },
+  // Core Technologies
   { name: "HTML", icon: FaHtml5 },
   { name: "CSS", icon: FaCss3Alt },
   { name: "JavaScript", icon: FaJsSquare },
   { name: "TypeScript", icon: SiTypescript },
+
+  // Frontend Frameworks and Libraries
   { name: "React", icon: FaReact },
   { name: "Next.js", icon: SiNextdotjs },
-  { name: "Node.js", icon: FaNodeJs },
-  { name: "Git", icon: FaGitAlt },
-  { name: "Tailwind", icon: SiTailwindcss },
-  { name: "Prisma", icon: SiPrisma },
-  { name: "MongoDB", icon: SiMongodb },
   { name: "Redux", icon: SiRedux },
-  { name: "GraphQL", icon: SiGraphql },
-  { name: "Apollo", icon: SiApollographql },
-  { name: "Express", icon: SiExpress },
-  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "Tailwind CSS", icon: SiTailwindcss },
   { name: "Framer Motion", icon: SiFramer },
+
+  // Backend Frameworks and Tools
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "Express", icon: SiExpress },
+  { name: "Prisma", icon: SiPrisma },
+  // { name: "tRPC", icon: SiTrpc }, // Optional, if relevant
+
+  // Databases and Data Management
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "MySQL", icon: SiMysql },
+  { name: "MongoDB", icon: SiMongodb },
+  // { name: "Redis", icon: SiRedis },
+  // { name: "ElasticSearch", icon: SiElastic },
+
+  // Cloud Platforms and Deployment
+  { name: "Firebase", icon: SiFirebase },
+  { name: "Docker", icon: SiDocker },
+  { name: "Kubernetes", icon: SiKubernetes },
+
+  // Testing Frameworks
+  { name: "Jest", icon: SiJest },
+  { name: "Cypress", icon: SiCypress },
+  { name: "Playwright", icon: SiPlaywright },
+
+  // Developer Tools
+  { name: "Git", icon: FaGitAlt },
+
+  // Advanced Tools
+  // { name: "GraphQL", icon: SiGraphql },
+  // { name: "Apollo", icon: SiApollographql },
+  { name: "Supabase", icon: SiSupabase },
+  { name: "Drizzle ORM", icon: SiDrizzle },
+  { name: "Zod Validation", icon: SiZod },
+  { name: "Clerk", icon: SiClerk },
 ] as const;
 
 export const educationData = [
@@ -168,7 +239,7 @@ export const educationData = [
     title: "Bachelor of Technology",
     edu: "Anand Engineering College",
     description:
-      "Acquired in-depth knowledge of computer science fundamentals, software development, and data structures. Developed skills in programming languages such as Java and Python, and gained hands-on experience through various projects.",
+      "Acquired in-depth knowledge of computer science fundamentals, data structures, and algorithms. Proficient in programming languages such as C, C++, JavaScript, and TypeScript, with hands-on experience in solving complex problems and building efficient solutions through various projects.",
     icon: React.createElement(FaGraduationCap),
     date: "Sep 2021 – Present",
   },
