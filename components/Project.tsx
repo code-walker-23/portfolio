@@ -7,24 +7,15 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 // writing type for extra clarity
-// import type { ProjectProps } from "@/lib/types";
-
-interface ProjectProps {
-  title: string;
-  description: string;
-  tags: string[];
-  imageUrl: string;
-  liveLink: string;
-  githubLink: string;
-}
+import type { ProjectProps } from "@/lib/types";
 
 function Project({
   title,
   description,
   tags,
   imageUrl,
-  liveLink = "",
-  githubLink = "",
+  liveLink,
+  githubLink,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
