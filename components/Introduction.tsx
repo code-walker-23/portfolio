@@ -64,7 +64,7 @@ const Introduction = () => {
         <span className="font-bold">front-end developer</span> with{" "}
         <span className="font-bold">internship experience</span> in{" "}
         <span className="italic">building websites</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <span className="underline">React (Next.js)</span>
       </motion.h1>
 
       <motion.div
@@ -99,7 +99,7 @@ const Introduction = () => {
 
         <a
           className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10  dark:bg-white/10  dark:text-white/60 dark:hover:text-gray-200"
-          href="https://www.linkedin.com/in/vinay-chhabra-a377601a9/"
+          href="https://www.linkedin.com/in/vinaychhabra27/"
           target="_blank"
           rel="noopener noreferrer"
         >

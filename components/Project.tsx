@@ -49,6 +49,7 @@ function Project({
             </Link>
             <Link
               href={liveLink}
+              target="_blank"
               rel="noopener noreferrer"
               className="transition duration-300 transform hover:text-gray-950 dark:text-white/60 hover:dark:text-white/90"
             >
