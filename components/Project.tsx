@@ -99,6 +99,7 @@ function Project({
               <Link
                 href={liveLink}
                 rel="noopener noreferrer"
+                target="_blank"
                 className="dark:text-white/60 hover:dark:text-white/90 text-gray-700 ml-3 hover:text-gray-950"
               >
                 <div className="flex mr-1">
