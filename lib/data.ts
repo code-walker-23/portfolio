@@ -132,6 +132,15 @@ export const projectsData = [
     githubLink: "https://github.com/code-walker-23/job-portal",
   },
   {
+    title: "Sorting Visualizer",
+    description:
+      "An interactive sorting visualizer that lets users visualize various sorting algorithms in action. Users can customize array values and speeds, providing an engaging educational tool for understanding sorting mechanisms.",
+    tags: ["Next.js", "Typescript", "Tailwind CSS", "Vercel"],
+    imageUrl: sortingVisualizer,
+    liveLink: "https://sorting-visualizer-by-vinay-chhabra.vercel.app/",
+    githubLink: "https://github.com/code-walker-23/sorting-visualizer",
+  },
+  {
     title: "Schedullr",
     description:
       "A scheduling application that enables users to book events with real-time availability. It integrates with Google Calendar for seamless event synchronization, featuring customizable booking options and efficient appointment management.",
@@ -149,15 +158,6 @@ export const projectsData = [
     imageUrl: schedullr,
     liveLink: "https://schedullr-by-vinay-chhabra.vercel.app/",
     githubLink: "https://github.com/code-walker-23/schedullr",
-  },
-  {
-    title: "Sorting Visualizer",
-    description:
-      "An interactive sorting visualizer that lets users visualize various sorting algorithms in action. Users can customize array values and speeds, providing an engaging educational tool for understanding sorting mechanisms.",
-    tags: ["Next.js", "Typescript", "Tailwind CSS", "Vercel"],
-    imageUrl: sortingVisualizer,
-    liveLink: "https://sorting-visualizer-by-vinay-chhabra.vercel.app/",
-    githubLink: "https://github.com/code-walker-23/sorting-visualizer",
   },
   {
     title: "Linkeat",
