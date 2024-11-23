@@ -122,6 +122,7 @@ export const projectsData = [
       "PostgreSQL",
       "Clerk",
       "Tailwind CSS",
+      "Shadcn UI",
       "Vite",
       "Vercel",
       "React Hook Form",
