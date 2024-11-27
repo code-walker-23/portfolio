@@ -61,7 +61,7 @@ const Introduction = () => {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm Vinay Chhabra.</span> I'm a{" "}
-        <span className="font-bold">front-end developer</span> with{" "}
+        <span className="font-bold">full-stack developer</span> with{" "}
         <span className="font-bold">internship experience</span> in{" "}
         <span className="italic">building websites</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>
