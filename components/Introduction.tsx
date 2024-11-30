@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -29,15 +28,9 @@ const Introduction = () => {
               duration: 0.2,
             }}
           >
-            <Image
-              src="https://avatars.githubusercontent.com/u/116024992?v=4"
-              alt="Vinay Chhabra"
-              width="292"
-              height="292"
-              quality="95"
-              priority={true}
-              className="rounded-full h-24 w-24 border-[0.35rem] border-white shadow-xl object-cover dark:border-white/10"
-            />
+            <div className="rounded-full h-24 w-24 border-[0.35rem] border-white shadow-xl object-cover dark:border-white/10 flex items-center justify-center dark:text-white text-black text-4xl font-semibold">
+              VC
+            </div>
           </motion.div>
 
           <motion.span
