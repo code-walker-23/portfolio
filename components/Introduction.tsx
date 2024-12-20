@@ -83,7 +83,7 @@ const Introduction = () => {
         <a
           className=" group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 
           hover:text-gray-950 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:hover:text-white hover:dark:bg-white/5"
-          href="/vinay-resume.pdf"
+          href="/Vinay_Chhabra_Software_Engineer_Resume.pdf"
           download={true}
         >
           Download Resume
